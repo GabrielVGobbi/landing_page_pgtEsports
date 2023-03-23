@@ -1125,8 +1125,11 @@ section {
 .modal-body {
   @import url("https://themes.googleusercontent.com/fonts/css?kit=34EU4ObusLSAhOTSMoMnakqb2CZCnnVSB0j8VhctXfMmRpwDaxy-xHGBfvchKHuAzn7HzOq77rru4daWN6__gA");
 }
-.modal-body * {
+.modal-body p,
+.modal-body h1,
+.modal-body span {
   color: white !important;
+  background-color: transparent !important;
 }
 .modal-body ol.lst-kix_93tx4mq9nbts-5 {
   list-style-type: none;
@@ -1826,6 +1829,7 @@ section {
   white-space: nowrap;
   display: inline-block;
   min-width: 18pt;
+  color: white;
 }
 .modal-body ol.lst-kix_93tx4mq9nbts-7.start {
   counter-reset: lst-ctn-kix_93tx4mq9nbts-7 0;
@@ -1845,7 +1849,6 @@ section {
   padding: 0;
 }
 .modal-body .c10 {
-  background-color: #ffffff;
   color: #000000;
   font-weight: 700;
   text-decoration: none;
@@ -2051,7 +2054,7 @@ section {
   text-align: left;
 }
 .modal-body h2 {
-  background-color: #ffffff;
+  background-color: transparent !important;
   padding-top: 18pt;
   color: #000000;
   font-weight: 700;
