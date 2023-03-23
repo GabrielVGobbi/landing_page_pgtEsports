@@ -8,8 +8,6 @@ section#hero {
     background-repeat: no-repeat;
     background-size: 100%;
     background-size: cover;
-    background-position: 15%;
-    background-position-x: unset;
 
     .hero {
         .hero__gradient {
@@ -89,9 +87,7 @@ section#hero {
     }
 
     @media (max-width: 1024px) {
-        background: transparent;
-        justify-content: center;
-        text-align: center;
+        background-position: 58%;
 
         .hero__info,
         .hero__buttons {
@@ -358,7 +354,7 @@ section#awards {
         }
 
         .countdown_date {
-            gap: 41px !important;
+            gap: 22px !important;
 
             & div {
                 padding-bottom: 0 !important;
@@ -667,9 +663,19 @@ section.helper {
             gap: 4rem;
         }
 
+        .enrollment_info {
+            h1 {
+                font-size: -webkit-xxx-large;
+            }
+        }
+
         .enrollment_form {
             width: 100% !important;
             margin-bottom: 2rem;
+
+            & > form {
+                width: 100%;
+            }
         }
     }
 }
@@ -681,6 +687,7 @@ section.empresas {
         @media (max-width: 1024px) {
             & {
                 content: url("images/empresas_mobile.png");
+                max-width: 100%;
             }
         }
     }

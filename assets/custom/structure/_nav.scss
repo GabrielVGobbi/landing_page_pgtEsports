@@ -20,7 +20,7 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 16px;
-            color: #F4F5F6;
+            color: #f4f5f6;
 
             &:hover,
             &:active {
@@ -97,5 +97,11 @@
                 font-size: 1.5rem;
             }
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-btn_register {
+        display: none;
     }
 }

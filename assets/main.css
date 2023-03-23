@@ -190,7 +190,7 @@ header > div .logo img {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  color: #F4F5F6;
+  color: #f4f5f6;
 }
 .nav .nav__item .nav__link:hover, .nav .nav__item .nav__link:active {
   color: #d946ef;
@@ -252,6 +252,11 @@ header > div .logo img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .header-btn_register {
+    display: none;
+  }
+}
 .container {
   max-width: 1070px;
   width: 100%;
@@ -326,8 +331,6 @@ section#hero {
   background-repeat: no-repeat;
   background-size: 100%;
   background-size: cover;
-  background-position: 15%;
-  background-position-x: unset;
 }
 section#hero .hero {
   padding-top: 5rem;
@@ -394,9 +397,7 @@ section#hero .hero .hero__buttons button a {
 }
 @media (max-width: 1024px) {
   section#hero {
-    background: transparent;
-    justify-content: center;
-    text-align: center;
+    background-position: 58%;
   }
   section#hero .hero__info,
   section#hero .hero__buttons {
@@ -621,7 +622,7 @@ section#awards .awards_button button a {
     gap: 24px !important;
   }
   section#awards .countdown_date {
-    gap: 41px !important;
+    gap: 22px !important;
   }
   section#awards .countdown_date div {
     padding-bottom: 0 !important;
@@ -888,9 +889,15 @@ section.helper .helper_text-classificatorio {
     align-items: center;
     gap: 4rem;
   }
+  .enrollment .enrollment_info h1 {
+    font-size: -webkit-xxx-large;
+  }
   .enrollment .enrollment_form {
     width: 100% !important;
     margin-bottom: 2rem;
+  }
+  .enrollment .enrollment_form > form {
+    width: 100%;
   }
 }
 
@@ -901,6 +908,7 @@ section.empresas img {
 @media (max-width: 1024px) {
   section.empresas img {
     content: url("images/empresas_mobile.png");
+    max-width: 100%;
   }
 }
 
