@@ -214,6 +214,7 @@ section#awards {
     }
 
     .games_row {
+        margin-top: 3rem;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -226,21 +227,24 @@ section#awards {
             justify-content: center;
             background: rgba(76, 29, 149, 0.4);
             border-radius: 32px;
-            align-content: baseline;
+            align-content: center;
             gap: 101px;
-
             .game_logo {
+                text-align: center;
+                margin-top: 212px;
+                text-align: center;
                 img {
-                    margin-top: 212px;
+                    max-width: 50%;
                 }
             }
 
             .game_item-buttons {
                 text-align: center;
+                align-self: self-end;
 
                 button.btn-outline-rules {
                     align-self: self-end;
-                    margin-bottom: 64px;
+                    margin: -1px 0 64px;
                 }
             }
         }
