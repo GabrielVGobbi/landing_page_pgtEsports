@@ -1,0 +1,793 @@
+section#hero {
+    gap: 1rem;
+    min-height: 100vh;
+
+    background-image: linear-gradient(66.09deg, #090b36 29.03%, rgba(9, 11, 54, 0) 100%), url("images/hero.png");
+    background-origin: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    background-position: 15%;
+    background-position-x: unset;
+
+    .hero {
+        .hero__gradient {
+            height: inherit;
+            width: inherit;
+            background: linear-gradient(to top, #111, transparent);
+        }
+
+        padding-top: 5rem;
+        display: grid;
+        gap: 2rem;
+
+        .hero__info {
+            display: grid;
+            max-width: 32%;
+            gap: 1.25rem;
+
+            h1 {
+                font-style: normal;
+                font-weight: bold;
+                line-height: 4.8rem;
+            }
+
+            p,
+            h1 {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            p {
+                font-family: "Epilogue";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #b1b5c3;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+                min-width: 483px;
+                min-height: 120px;
+            }
+        }
+
+        .hero__buttons {
+            display: flex;
+            margin-bottom: 7rem;
+
+            button {
+                padding: 16px 64px;
+                height: 16px;
+
+                font-family: "Epilogue";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 16px;
+                /* identical to box height, or 100% */
+
+                text-align: center;
+
+                /* Neutrals 7 */
+
+                color: #f4f5f6;
+
+                /* Inside auto layout */
+
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                font-weight: 500;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        background: transparent;
+        justify-content: center;
+        text-align: center;
+
+        .hero__info,
+        .hero__buttons {
+            max-width: 100% !important;
+            justify-content: center;
+            display: grid !important;
+            gap: 1rem;
+        }
+    }
+}
+
+.___parteRoxa {
+    & > div {
+        background-color: #ff16f0;
+        padding: 0.6rem;
+    }
+
+    #outer {
+        overflow: hidden;
+    }
+
+    #outer div {
+        display: initial;
+    }
+
+    #loop {
+        white-space: nowrap;
+        animation: loop-anim 20s linear infinite;
+    }
+
+    @keyframes loop-anim {
+        0% {
+            margin-left: 0;
+        }
+        100% {
+            margin-left: -50%; /* This works because of the div between "outer" and "loop" */
+        }
+    }
+
+    #loop {
+        display: flex;
+    }
+
+    #content {
+        font-family: "Epilogue";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #141416;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+section#awards {
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+    background-position-x: unset;
+    background-image: url("images/Blur.png");
+    background-position: 81% calc(125% + 58rem);
+
+    & {
+        padding-bottom: 0 !important;
+    }
+
+    & > .container {
+        display: grid;
+        justify-content: center;
+    }
+
+    .awards_card {
+        background: rgba(76, 29, 149, 0.4);
+        backdrop-filter: blur(50px);
+        border-radius: 32px;
+        padding: 0px 100px;
+    }
+
+    .awards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+        padding: 0px 0px 0px 0px;
+
+        .t9k {
+            text-align: center;
+        }
+    }
+
+    .awards_info {
+        display: grid;
+        gap: 32px;
+        width: 414px;
+        h1 {
+            font-family: "Epilogue";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: -0.02em;
+
+            b {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 48px;
+                letter-spacing: -0.02em;
+                color: #d946ef;
+            }
+
+            .awards_price {
+                font-family: "Abhaya Libre";
+            }
+        }
+    }
+
+    .games_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 32px;
+
+        .game_item {
+            width: 352px;
+            height: 480px;
+            display: grid;
+            justify-content: center;
+            background: rgba(76, 29, 149, 0.4);
+            border-radius: 32px;
+            align-content: baseline;
+            gap: 101px;
+
+            .game_logo {
+                img {
+                    margin-top: 212px;
+                }
+            }
+
+            .game_item-buttons {
+                text-align: center;
+
+                button.btn-outline-rules {
+                    align-self: self-end;
+                    margin-bottom: 64px;
+                }
+            }
+        }
+
+        .game_item:hover {
+        }
+    }
+
+    .countdown {
+        margin-top: 5rem;
+
+        h4 {
+            font-family: "Epilogue";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fcfcfd;
+            margin-bottom: 40px;
+        }
+
+        p {
+            color: #fff;
+        }
+
+        .countdown_date {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & div {
+                display: grid;
+                align-items: center;
+                text-align: center;
+                align-self: center;
+                min-width: 180px;
+                padding-bottom: 2rem;
+            }
+
+            .number {
+                font-family: "SF Pro Display" !important;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 64px;
+                line-height: 64px;
+                text-align: center;
+                color: #ffffff;
+            }
+
+            p {
+                font-family: "Epilogue";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: #b1b5c3;
+            }
+        }
+    }
+    .awards_button {
+        button {
+            a {
+                color: white;
+            }
+        }
+    }
+    @media (max-width: 1024px) {
+        & > .container {
+            padding: 0px !important;
+        }
+
+        & {
+            padding-top: 0 !important;
+        }
+
+        .awards_card {
+            padding: 0 32px !important;
+            border-radius: 0 !important;
+        }
+
+        .awards {
+            display: grid !important;
+            padding: 2rem;
+        }
+
+        .awards_info {
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .awards_button {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            button {
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        .games_row {
+            display: grid !important;
+            justify-content: space-around;
+            gap: 24px !important;
+        }
+
+        .countdown_date {
+            gap: 41px !important;
+
+            & div {
+                padding-bottom: 0 !important;
+                min-width: 0px !important;
+            }
+
+            .number {
+                font-size: 43px !important;
+            }
+        }
+    }
+}
+
+section.helper {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    background-position-x: unset;
+    margin-bottom: 2rem;
+    background-image: url("images/blur2.png");
+    background-position: 0 4%;
+
+    & > div {
+        display: flex;
+        gap: 117px;
+        max-width: 1443px;
+        padding-left: 224px;
+    }
+
+    .helper_title {
+        text-align: center;
+        h2 {
+            margin-top: 43px;
+            font-family: "Epilogue";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: -0.02em;
+            text-align: initial;
+        }
+    }
+
+    .helper_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 48px;
+        gap: 24px;
+        background: rgba(76, 29, 149, 0.4);
+        box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1);
+        border-radius: 20px;
+        width: 544px;
+
+        .helper_item {
+            display: flex;
+            gap: 24px;
+            padding: 18px;
+            &.active {
+                background: rgba(76, 29, 149, 0.4);
+                border-radius: 12px;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                color: #b1b5c3;
+            }
+        }
+
+        h6 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #fcfcfd;
+        }
+    }
+
+    .helper_text-classificatorio {
+        font-family: "Epilogue";
+        font-style: normal;
+        font-weight: 500 !important;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #f4f5f6;
+        margin-top: 6px;
+    }
+
+    @media (max-width: 1024px) {
+        & {
+            background-position: 45% 0% !important;
+        }
+
+        & > div {
+            display: grid !important;
+            padding-left: 10px;
+            padding-right: 10px;
+            gap: 0px;
+        }
+
+        .helper_title {
+            .logo {
+                text-align: center;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+            }
+            h2 {
+                text-align: center !important;
+            }
+        }
+        .helper_info {
+            padding: 9px !important;
+            width: 100% !important;
+        }
+    }
+}
+
+.registration {
+    .registration_timeline {
+        display: grid;
+        margin-top: 3rem;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        gap: 42px;
+        text-align: center;
+    }
+
+    .timeline_item {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        width: 224px;
+        & > p:first-child {
+            color: #d946ef;
+        }
+
+        .timeline_item-p {
+            font-family: "Epilogue";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #f4f5f6;
+            width: 183px;
+        }
+    }
+
+    .registration_timeline.only-sm {
+        display: none;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    @media (max-width: 1024px) {
+        .registration_timeline.only-sm {
+            display: grid !important;
+            gap: 5rem !important;
+
+            .timeline_item {
+                gap: 24px;
+            }
+        }
+
+        .registration_timeline.only-md {
+            display: none !important;
+        }
+    }
+}
+
+.cronograma {
+    padding-bottom: 10rem !important;
+
+    h2 {
+        font-size: 48px;
+    }
+
+    .cronograma_timeline {
+        margin-top: 3rem;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        gap: 144px;
+
+        img {
+            content: url("images/cronograma.png");
+
+            @media (max-width: 1024px) {
+                & {
+                    content: url("images/cronograma_mobile.png");
+                }
+            }
+        }
+    }
+}
+
+.enrollment {
+    background: linear-gradient(95.24deg, #4637ff 0%, #d946ef 100%);
+    max-height: 464px;
+
+    & .enrollment_div {
+        display: flex;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .enrollment_info {
+        margin-top: 3rem;
+        align-self: center;
+        align-items: center;
+        gap: 16px;
+        display: grid;
+        h6 {
+            font-size: 1.5rem;
+        }
+        h1 {
+            font-family: "Epilogue";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 72px;
+            letter-spacing: -0.02em;
+            color: #f4f5f6;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+        p {
+            font-family: "Epilogue";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #e6e8ec;
+            width: 420px;
+        }
+    }
+
+    .enrollment_form {
+        & > form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 32px;
+            gap: 17px;
+            width: 413px;
+            height: 524px;
+            left: 866px;
+            margin-top: -31px;
+            background: #fcfcfd;
+            -webkit-backdrop-filter: blur(32px);
+            backdrop-filter: blur(32px);
+            border-radius: 16px;
+            color: #000;
+        }
+
+        label {
+            color: #626f86 !important;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .input {
+            width: 100%;
+        }
+
+        h6 {
+            font-family: "Epilogue";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            /* identical to box height, or 125% */
+
+            letter-spacing: -0.01em;
+
+            /* Neutrals 1 */
+
+            color: #141416;
+        }
+
+        .w-100 {
+            margin-top: 11px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        & {
+            max-height: 100% !important;
+        }
+
+        .enrollment_div {
+            display: grid !important;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .enrollment_form {
+            width: 100% !important;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+section.empresas {
+    img {
+        content: url("images/Incentivo_Apoio_Organizacao.png");
+        max-width: 55%;
+        @media (max-width: 1024px) {
+            & {
+                content: url("images/empresas_mobile.png");
+            }
+        }
+    }
+}
+
+footer {
+    border-top: 1px solid rgba(76, 29, 149, 0.4);
+    border-bottom: 1px solid rgba(76, 29, 149, 0.4);
+    padding: 48px;
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+
+        .infos {
+            display: grid;
+            gap: 16px;
+            p {
+                margin-bottom: 0;
+                font-family: "Epilogue";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: #777e90;
+            }
+            p:nth-child(1) {
+                color: white !important;
+            }
+        }
+    }
+
+    .icons_social {
+        display: flex;
+        gap: 24px;
+        i {
+            color: #b1b5c3;
+        }
+    }
+
+    .description {
+        & > div {
+            display: grid;
+            gap: 32px;
+
+            p {
+                font-family: "Epilogue";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: #777e90;
+                width: 397px;
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 24px;
+
+            a {
+                color: #fff;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        & {
+            padding: 32px !important;
+        }
+
+        .footer {
+            display: grid !important;
+            gap: 2rem;
+        }
+        p {
+            max-width: none !important;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    p {
+        width: auto !important;
+        min-width: auto !important;
+    }
+}
+
+@media (max-width: 1499px) {
+    section#awards {
+        background-position: left calc(-80% - (2rem));
+    }
+}
+
+@media (max-width: 1071px) {
+    section#awards {
+        background-position: left 478%;
+    }
+}
+
+.direitos {
+    margin-top: 1rem !important;
+}
+
+.direitos_text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #777e90;
+    text-align: center;
+}

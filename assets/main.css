@@ -1,0 +1,1115 @@
+/*--------------------------------------------------------------
+# Colors 207 , 90 , 42
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Reset
+--------------------------------------------------------------*/
+:root {
+  --header-height: 3rem;
+  /*--------------------------------------------------------------
+  # Color
+  --------------------------------------------------------------*/
+  --primary: hsl(292, 84%, 43%);
+  --secondary: hsl(292, 84%, 100%);
+  --light: hsl(292, 84%, 40%);
+  --dark: hsl(292, 84%, 1%);
+  /*--------------------------------------------------------------
+  # Body
+  --------------------------------------------------------------*/
+  --body-bg: #fff;
+  --body-color: #090B36;
+  --body-bg-dark: #090B36;
+  --body-color-dark: rgba(235, 235, 235, 0.968627451);
+  /*--------------------------------------------------------------
+  # Tipografia
+  --------------------------------------------------------------*/
+  --font-family: Epilogue, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-size-base: 1rem;
+  --h1-font-size: 4.5rem;
+  --h2-font-size: 3.5rem;
+}
+
+:root {
+  --text: var(--light);
+  --body-bg: var(--body-bg-dark);
+  --body-color: var(--body-color-dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  max-width: 100vw;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 10px 0;
+  font-family: var(--font-family);
+  background-color: var(--body-bg);
+  color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-normal);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+i {
+  color: var(--dark);
+}
+
+button {
+  border: none;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  line-height: 80px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-size: var(--font-size-base);
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b1b5c3;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  line-height: 80px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+/*--------------------------------------------------------------
+# Structure
+--------------------------------------------------------------*/
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+header {
+  height: 144px;
+  display: flex;
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s;
+  z-index: 100;
+  background: transparent;
+  max-width: 1070px;
+}
+header > div .logo h1 {
+  font-size: 2rem !important;
+}
+header > div .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 100px;
+  padding: 10px;
+}
+@media (max-width: 1024px) {
+  header > div button {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 100;
+}
+.nav .nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+.nav .nav__item .nav__link {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #F4F5F6;
+}
+.nav .nav__item .nav__link:hover, .nav .nav__item .nav__link:active {
+  color: #d946ef;
+}
+.nav i {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .nav .nav__menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
+    height: 100%;
+    display: none;
+  }
+  .nav .nav__menu.show-menu {
+    display: block !important;
+    bottom: 0 !important;
+  }
+  .nav i {
+    display: block !important;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+    color: var(--body-color);
+  }
+  .nav i:hover, .nav i:active {
+    color: var(--primary);
+  }
+  .nav .nav__list {
+    display: grid;
+    gap: 2rem;
+  }
+  .nav .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: var(--font-weight-normal);
+  }
+  .nav .nav__link:hover, .nav .nav__link:active {
+    color: var(--primary);
+  }
+  .nav .nav__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: 0.5rem;
+    font-size: 1.5rem;
+    top: 10px;
+    cursor: pointer;
+  }
+  .nav .nav__btns i {
+    display: block !important;
+    font-size: 1.5rem;
+  }
+}
+
+.container {
+  max-width: 1070px;
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+  .container-sm,
+  .container-md {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
+    max-width: 1210px;
+  }
+}
+@media (min-width: 1500px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 1320px;
+  }
+}
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+}
+
+.section_subtitle {
+  font-size: var(--font-size-base);
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.section__title,
+.section_subtitle {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+section#hero {
+  gap: 1rem;
+  min-height: 100vh;
+  background-image: linear-gradient(66.09deg, #090b36 29.03%, rgba(9, 11, 54, 0) 100%), url("images/hero.png");
+  background-origin: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  background-position: 15%;
+  background-position-x: unset;
+}
+section#hero .hero {
+  padding-top: 5rem;
+  display: grid;
+  gap: 2rem;
+}
+section#hero .hero .hero__gradient {
+  height: inherit;
+  width: inherit;
+  background: linear-gradient(to top, #111, transparent);
+}
+section#hero .hero .hero__info {
+  display: grid;
+  max-width: 32%;
+  gap: 1.25rem;
+}
+section#hero .hero .hero__info h1 {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 4.8rem;
+}
+section#hero .hero .hero__info p,
+section#hero .hero .hero__info h1 {
+  width: 100%;
+  max-width: 100%;
+}
+section#hero .hero .hero__info p {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #b1b5c3;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  min-width: 483px;
+  min-height: 120px;
+}
+section#hero .hero .hero__buttons {
+  display: flex;
+  margin-bottom: 7rem;
+}
+section#hero .hero .hero__buttons button {
+  padding: 16px 64px;
+  height: 16px;
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+  text-align: center;
+  /* Neutrals 7 */
+  color: #f4f5f6;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  font-weight: 500;
+}
+section#hero .hero .hero__buttons button a {
+  color: white;
+}
+@media (max-width: 1024px) {
+  section#hero {
+    background: transparent;
+    justify-content: center;
+    text-align: center;
+  }
+  section#hero .hero__info,
+  section#hero .hero__buttons {
+    max-width: 100% !important;
+    justify-content: center;
+    display: grid !important;
+    gap: 1rem;
+  }
+}
+
+.___parteRoxa > div {
+  background-color: #ff16f0;
+  padding: 0.6rem;
+}
+.___parteRoxa #outer {
+  overflow: hidden;
+}
+.___parteRoxa #outer div {
+  display: initial;
+}
+.___parteRoxa #loop {
+  white-space: nowrap;
+  animation: loop-anim 20s linear infinite;
+}
+@keyframes loop-anim {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -50%; /* This works because of the div between "outer" and "loop" */
+  }
+}
+.___parteRoxa #loop {
+  display: flex;
+}
+.___parteRoxa #content {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #141416;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+section#awards {
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  background-position-x: unset;
+  background-image: url("images/Blur.png");
+  background-position: 81% calc(125% + 58rem);
+}
+section#awards {
+  padding-bottom: 0 !important;
+}
+section#awards > .container {
+  display: grid;
+  justify-content: center;
+}
+section#awards .awards_card {
+  background: rgba(76, 29, 149, 0.4);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  border-radius: 32px;
+  padding: 0px 100px;
+}
+section#awards .awards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  padding: 0px 0px 0px 0px;
+}
+section#awards .awards .t9k {
+  text-align: center;
+}
+section#awards .awards_info {
+  display: grid;
+  gap: 32px;
+  width: 414px;
+}
+section#awards .awards_info h1 {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+}
+section#awards .awards_info h1 b {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  color: #d946ef;
+}
+section#awards .awards_info h1 .awards_price {
+  font-family: "Abhaya Libre";
+}
+section#awards .games_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 32px;
+}
+section#awards .games_row .game_item {
+  width: 352px;
+  height: 480px;
+  display: grid;
+  justify-content: center;
+  background: rgba(76, 29, 149, 0.4);
+  border-radius: 32px;
+  align-content: baseline;
+  gap: 101px;
+}
+section#awards .games_row .game_item .game_logo img {
+  margin-top: 212px;
+}
+section#awards .games_row .game_item .game_item-buttons {
+  text-align: center;
+}
+section#awards .games_row .game_item .game_item-buttons button.btn-outline-rules {
+  align-self: self-end;
+  margin-bottom: 64px;
+}
+section#awards .countdown {
+  margin-top: 5rem;
+}
+section#awards .countdown h4 {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fcfcfd;
+  margin-bottom: 40px;
+}
+section#awards .countdown p {
+  color: #fff;
+}
+section#awards .countdown .countdown_date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#awards .countdown .countdown_date div {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  min-width: 180px;
+  padding-bottom: 2rem;
+}
+section#awards .countdown .countdown_date .number {
+  font-family: "SF Pro Display" !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  text-align: center;
+  color: #ffffff;
+}
+section#awards .countdown .countdown_date p {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #b1b5c3;
+}
+section#awards .awards_button button a {
+  color: white;
+}
+@media (max-width: 1024px) {
+  section#awards > .container {
+    padding: 0px !important;
+  }
+  section#awards {
+    padding-top: 0 !important;
+  }
+  section#awards .awards_card {
+    padding: 0 32px !important;
+    border-radius: 0 !important;
+  }
+  section#awards .awards {
+    display: grid !important;
+    padding: 2rem;
+  }
+  section#awards .awards_info {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  section#awards .awards_button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+  section#awards .awards_button button a {
+    color: white;
+  }
+  section#awards .games_row {
+    display: grid !important;
+    justify-content: space-around;
+    gap: 24px !important;
+  }
+  section#awards .countdown_date {
+    gap: 41px !important;
+  }
+  section#awards .countdown_date div {
+    padding-bottom: 0 !important;
+    min-width: 0px !important;
+  }
+  section#awards .countdown_date .number {
+    font-size: 43px !important;
+  }
+}
+
+section.helper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  background-position-x: unset;
+  margin-bottom: 2rem;
+  background-image: url("images/blur2.png");
+  background-position: 0 4%;
+}
+section.helper > div {
+  display: flex;
+  gap: 117px;
+  max-width: 1443px;
+  padding-left: 224px;
+}
+section.helper .helper_title {
+  text-align: center;
+}
+section.helper .helper_title h2 {
+  margin-top: 43px;
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  text-align: initial;
+}
+section.helper .helper_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  gap: 24px;
+  background: rgba(76, 29, 149, 0.4);
+  box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1);
+  border-radius: 20px;
+  width: 544px;
+}
+section.helper .helper_info .helper_item {
+  display: flex;
+  gap: 24px;
+  padding: 18px;
+}
+section.helper .helper_info .helper_item.active {
+  background: rgba(76, 29, 149, 0.4);
+  border-radius: 12px;
+}
+section.helper .helper_info .helper_item p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #b1b5c3;
+}
+section.helper .helper_info h6 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fcfcfd;
+}
+section.helper .helper_text-classificatorio {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f4f5f6;
+  margin-top: 6px;
+}
+@media (max-width: 1024px) {
+  section.helper {
+    background-position: 45% 0% !important;
+  }
+  section.helper > div {
+    display: grid !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 0px;
+  }
+  section.helper .helper_title .logo {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  section.helper .helper_title h2 {
+    text-align: center !important;
+  }
+  section.helper .helper_info {
+    padding: 9px !important;
+    width: 100% !important;
+  }
+}
+
+.registration .registration_timeline {
+  display: grid;
+  margin-top: 3rem;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  gap: 42px;
+  text-align: center;
+}
+.registration .timeline_item {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 224px;
+}
+.registration .timeline_item > p:first-child {
+  color: #d946ef;
+}
+.registration .timeline_item .timeline_item-p {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f4f5f6;
+  width: 183px;
+}
+.registration .registration_timeline.only-sm {
+  display: none;
+}
+.registration h2 {
+  font-size: 48px;
+}
+@media (max-width: 1024px) {
+  .registration .registration_timeline.only-sm {
+    display: grid !important;
+    gap: 5rem !important;
+  }
+  .registration .registration_timeline.only-sm .timeline_item {
+    gap: 24px;
+  }
+  .registration .registration_timeline.only-md {
+    display: none !important;
+  }
+}
+
+.cronograma {
+  padding-bottom: 10rem !important;
+}
+.cronograma h2 {
+  font-size: 48px;
+}
+.cronograma .cronograma_timeline {
+  margin-top: 3rem;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  gap: 144px;
+}
+.cronograma .cronograma_timeline img {
+  content: url("images/cronograma.png");
+}
+@media (max-width: 1024px) {
+  .cronograma .cronograma_timeline img {
+    content: url("images/cronograma_mobile.png");
+  }
+}
+
+.enrollment {
+  background: linear-gradient(95.24deg, #4637ff 0%, #d946ef 100%);
+  max-height: 464px;
+}
+.enrollment .enrollment_div {
+  display: flex;
+  display: flex;
+  justify-content: space-around;
+}
+.enrollment .enrollment_info {
+  margin-top: 3rem;
+  align-self: center;
+  align-items: center;
+  gap: 24px;
+  display: grid;
+}
+.enrollment .enrollment_info h6 {
+  font-size: 1.5rem;
+}
+.enrollment .enrollment_info h1 {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.02em;
+  color: #f4f5f6;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.enrollment .enrollment_info p {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #e6e8ec;
+  width: 420px;
+}
+.enrollment .enrollment_form > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  gap: 17px;
+  width: 413px;
+  height: 524px;
+  left: 866px;
+  margin-top: -31px;
+  background: #fcfcfd;
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+  border-radius: 16px;
+  color: #000;
+}
+.enrollment .enrollment_form label {
+  color: #626f86 !important;
+  font-size: 11px;
+  font-weight: 600;
+}
+.enrollment .enrollment_form .input {
+  width: 100%;
+}
+.enrollment .enrollment_form h6 {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.01em;
+  /* Neutrals 1 */
+  color: #141416;
+}
+.enrollment .enrollment_form .w-100 {
+  margin-top: 11px;
+}
+@media (max-width: 1024px) {
+  .enrollment {
+    max-height: 100% !important;
+  }
+  .enrollment .enrollment_div {
+    display: grid !important;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  .enrollment .enrollment_form {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+}
+
+section.empresas img {
+  content: url("images/Incentivo_Apoio_Organizacao.png");
+  max-width: 55%;
+}
+@media (max-width: 1024px) {
+  section.empresas img {
+    content: url("images/empresas_mobile.png");
+  }
+}
+
+footer {
+  border-top: 1px solid rgba(76, 29, 149, 0.4);
+  border-bottom: 1px solid rgba(76, 29, 149, 0.4);
+  padding: 48px;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer .infos {
+  display: grid;
+  gap: 16px;
+}
+footer .footer .infos p {
+  margin-bottom: 0;
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777e90;
+}
+footer .footer .infos p:nth-child(1) {
+  color: white !important;
+}
+footer .icons_social {
+  display: flex;
+  gap: 24px;
+}
+footer .icons_social i {
+  color: #b1b5c3;
+}
+footer .description > div {
+  display: grid;
+  gap: 32px;
+}
+footer .description > div p {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777e90;
+  width: 397px;
+}
+footer .description .links {
+  display: flex;
+  gap: 24px;
+}
+footer .description .links a {
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+@media (max-width: 1024px) {
+  footer {
+    padding: 32px !important;
+  }
+  footer .footer {
+    display: grid !important;
+    gap: 2rem;
+  }
+  footer p {
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  p {
+    width: auto !important;
+    min-width: auto !important;
+  }
+}
+@media (max-width: 1499px) {
+  section#awards {
+    background-position: left calc(-80% - 2rem);
+  }
+}
+@media (max-width: 1071px) {
+  section#awards {
+    background-position: left 478%;
+  }
+}
+.direitos {
+  margin-top: 1rem !important;
+}
+
+.direitos_text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777e90;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+button,
+a {
+  outline: none !important;
+}
+
+button {
+  font-family: proxima-nova, sans-serif;
+  min-height: 48px;
+  -webkit-padding-end: 16px;
+          padding-inline-end: 16px;
+  -webkit-padding-start: 16px;
+          padding-inline-start: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  flex-shrink: 0;
+  border-radius: 90px;
+  transition: background-color 0.15s ease-out 0s, color, opacity, border;
+  height: 50px;
+  padding: 16px 24px;
+  -webkit-margin-end: 16px;
+          margin-inline-end: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease-out 0s;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: rgb(252, 252, 253);
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+  font-weight: 500;
+  text-align: center;
+  /* Neutrals/8 */
+  color: #fcfcfd;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.btn-outline-rules {
+  background: transparent;
+  color: var(--secondary);
+  border: 1px solid #fff;
+  font-weight: 700;
+  border-radius: 5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.btn-outline-rules:hover {
+  background: #d946ef;
+}
+
+.btn-primary {
+  background: #d946ef;
+  color: var(--secondary);
+}
+.btn-primary:hover {
+  background: #8c0ea0;
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--primary);
+  filter: brightness(90%);
+}
+.btn-secondary:hover {
+  background: #7c0c8d;
+  color: var(--secondary);
+}
+
+.btn-outline-primary {
+  background: #0076ff;
+  color: rgb(242, 244, 251);
+}
+
+/*--------------------------------------------------------------
+# Structe
+--------------------------------------------------------------
+@import "custom/components/card";
+
+@import "custom/structure/header";
+@import "custom/structure/nav";
+@import "custom/structure/section";
+
+//@import "custom/structure/topbar";
+//@import "custom/structure/navbar";
+//@import "custom/structure/footer";
+
+
+
+/*--------------------------------------------------------------
+# Helpers
+--------------------------------------------------------------
+@import "custom/helpers/typography";
+*/
+.tx-center {
+  text-align: center;
+}
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.c-d946ef {
+  color: #d946ef;
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */

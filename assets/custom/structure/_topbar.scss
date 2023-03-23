@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+
+#topbar {
+    background: $secondary;
+    padding: 10px 0;
+    font-size: 14px;
+
+    .contact-info {
+        a,
+        span {
+            padding-left: 5px;
+            color: $gray-600;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        a {
+            line-height: 0;
+            transition: 0.3s;
+
+            &:hover,
+            i:hover {
+                color: $primary;
+            }
+
+            i {
+                font-style: normal;
+                color: $primary;
+            }
+        }
+    }
+
+    .social-links a {
+        color: #bababa;
+        line-height: 0;
+        transition: 0.3s;
+        margin-left: 10px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}

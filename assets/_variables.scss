@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+# Colors 207 , 90 , 42
+--------------------------------------------------------------*/
+$hue: 292;
+$sat: 84%;
+$primary: hsl($hue, $sat, 42%);
+$secondary: hsl($hue, $sat, 80%);
+
+$light: hsl($hue, $sat, 40%);
+$dark: hsl($hue, $sat, 1%);
+
+$white: #fff;
+$black: #000;
+
+/*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+$body-bg-light: #fff; //#f4f5ff;
+$body-color-light: #090B36; //#f4f5ff;
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+$font-family: 'Epilogue', sans-serif;
+
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$h1-font-size: $font-size-base * 4.5;
+$h2-font-size: $font-size-base * 3.5;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;

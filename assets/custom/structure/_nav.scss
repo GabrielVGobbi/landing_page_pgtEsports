@@ -1,0 +1,101 @@
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 100;
+
+    .nav__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav__item {
+        .nav__link {
+            font-family: "Epilogue";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: #F4F5F6;
+
+            &:hover,
+            &:active {
+                color: #d946ef;
+            }
+        }
+    }
+
+    i {
+        display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+        .nav__menu {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: var(--body-bg);
+            color: var(--body-color);
+            padding: 2rem 1.5rem 4rem;
+            box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 1.5rem 1.5rem 0 0;
+            transition: 0.3s;
+            height: 100%;
+            display: none;
+        }
+
+        .nav__menu.show-menu {
+            display: block !important;
+            bottom: 0 !important;
+        }
+
+        i {
+            display: block !important;
+            margin-bottom: 0.2rem;
+            font-size: 1.2rem;
+            color: var(--body-color);
+
+            &:hover,
+            &:active {
+                color: var(--primary);
+            }
+        }
+
+        .nav__list {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .nav__link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: var(--font-weight-normal);
+
+            &:hover,
+            &:active {
+                color: var(--primary);
+            }
+        }
+
+        .nav__close {
+            position: absolute;
+            right: 1.3rem;
+            bottom: 0.5rem;
+            font-size: 1.5rem;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .nav__btns {
+            i {
+                display: block !important;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
